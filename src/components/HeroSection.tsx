@@ -120,17 +120,17 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
           >
             <div className="relative">
-              {/* Decorative Ring */}
+              {/* Decorative Ring (boxed) */}
               <motion.div
-                className="absolute inset-0 rounded-full bg-gradient-primary opacity-50 blur-xl"
+                className="absolute -inset-4 rounded-lg bg-gradient-primary opacity-50 blur-xl"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                style={{ scale: 1.1 }}
+                style={{ scale: 1.02 }}
               />
-              
-              {/* Image Container */}
+
+              {/* Image Container (boxed for clear display) */}
               <motion.div
-                className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-glow"
+                className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-lg overflow-hidden border-4 border-primary/30 shadow-glow bg-muted"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
