@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import profileImg from '@/assets/profile.jpg';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/rajesh31109?tab=overview&from=2025-09-01&to=2025-09-30', label: 'GitHub' },
@@ -120,22 +119,22 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
           >
             <div className="relative">
-              {/* Decorative Ring (boxed) */}
+              {/* Decorative Box (rectangular) */}
               <motion.div
-                className="absolute -inset-4 rounded-lg bg-gradient-primary opacity-50 blur-xl"
+                className="absolute -inset-4 rounded-none bg-gradient-primary opacity-50 blur-xl"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
                 style={{ scale: 1.02 }}
               />
 
-              {/* Image Container (boxed for clear display) */}
+              {/* Image Container (rectangle for clear display) */}
               <motion.div
-                className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-lg overflow-hidden border-4 border-primary/30 shadow-glow bg-muted"
+                className="relative w-80 h-64 sm:w-96 sm:h-72 lg:w-[640px] lg:h-[420px] rounded-none overflow-hidden border-4 border-primary/30 shadow-glow bg-muted"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src={profileImg}
+                  src="/Profileimage.jpeg"
                   alt="Pulluri Rajesh - Front-End Developer"
                   className="w-full h-full object-cover"
                 />
