@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import profileImg from '@/assets/profile.jpg';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/rajesh31109?tab=overview&from=2025-09-01&to=2025-09-30', label: 'GitHub' },
@@ -134,7 +135,7 @@ export const HeroSection = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="/Profileimage.jpg"
+                  src={profileImg}
                   alt="Pulluri Rajesh - Front-End Developer"
                   className="w-full h-full object-cover"
                 />
