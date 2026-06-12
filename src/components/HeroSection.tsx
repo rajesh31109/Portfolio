@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -8,6 +9,14 @@ const socialLinks = [
 ];
 
 export const HeroSection = () => {
+  const images = ['/Profileimage.jpeg', '/image2.jpeg'];
+  const [imgIndex, setImgIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setImgIndex(i => (i + 1) % images.length), 2000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section
       id="home"
@@ -133,10 +142,14 @@ export const HeroSection = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <img
-                  src="/Profileimage.jpeg"
+                <motion.img
+                  key={imgIndex}
+                  src={images[imgIndex]}
                   alt="Pulluri Rajesh - Front-End Developer"
-                  className="w-full h-full object-cover"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full h-full object-cover object-center"
                 />
               </motion.div>
 
